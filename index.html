@@ -8,46 +8,50 @@
     </head>
     <body>
         <h1>Calculadora JS</h1>
-        <div class="calculadora-container">
-            <input type="text" class="valores">
-            <div>
-                <button type="button">C</button>
-                <button type="button">CE</button>
-                <button type="button">%</button>
-                <button type="button">/</button>
+         <form>
+            <div class="calculadora-container">
+                <input class="valores" type="text" placeholder="Informe os valores">
+                <div class="botoes">
+                     <div>
+                        <input class="botao" type="button" value="C"></input>
+                        <input class="botao" type="button" value="CE"></input>
+                        <input class="botao" type="button" value="%" ></input>
+                        <button class="op" id="divisao"  value="13" >/</button>
+                    </div>
+                   
+                    <div>
+                        <input class="botao" type="button" value="7"></input>
+                        <input class="botao" type="button" value="8"></input>
+                        <input class="botao" type="button" value="9"></input>
+                        <button class="op" id="multiplicao" value="12" >x</button>    
+                    </div>
+                    <div>
+                        <input class="botao" type="button" value="4"></input>
+                        <input class="botao" type="button" value="5"></input>
+                        <input class="botao" type="button" value="6"></input>
+                        <button class="op" id="subtracao"  value="11">-</button> 
+                    </div>
+                    <div>
+                        <input class="botao" type="button" value="1"></input>
+                        <input class="botao" type="button" value="2"></input>
+                        <input class="botao" type="button" value="3"></input>
+                        <button class="op" id="soma" value="10">+</button> 
+                    </div>
+                    <div>
+                        <input class="botao" type="button" value="0"></input>
+                        <input class="botao" type="button" value=","></input>
+                        <input class="resultado" type="submit"  id="calcular" value="="></input>
+                    </div>
+                   
+                </div>
+               
             </div>
             <div>
-                <button type="button">7</button>
-                <button type="button">8</button>
-                <button type="button">9</button>
-                <button type="button">x</button> 
+                <p id="teste">45</p>
             </div>
-            <div>
-                <button type="button">4</button>
-                <button type="button">5</button>
-                <button type="button">6</button>
-                <button type="button">-</button> 
-            </div>
-            <div>
-                <button type="button">1</button>
-                <button type="button">2</button>
-                <button type="button">3</button>
-                <button type="button">+</button> 
-            </div>
-            <div>
-                <button type="button">0</button>
-                <button type="button">,</button>
-                <button type="submit" class="resultado" id="calcular">=</button>
-            </div>
-
-
-        </div>
-
-
-
-
-
-
+        </form>
+        
+    <script src="calculos.js"></script>
     </body> 
 
 
