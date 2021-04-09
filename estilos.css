@@ -25,16 +25,26 @@ body{
     border-radius: 5px;
     
 }
-.botao,.resultado,.op{
-    width: 50px;
+.botao,.botaoC,.botaoR,.op{
     height: 50px;
     margin: 5px;
     border-radius: 5px;
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-weight: bold;
 }
+.botao,.op{
+    width: 50px;   
+   
+}.botaoC{
+    width:180px ; 
+     
+}
+.botaoR{
+    width: 115px;     
+}
 
-.botao:hover,.resultado:hover,.op:hover{
+
+.botao:hover,.resultado:hover,.op:hover,.botaoR:hover,.botaoC:hover{
     background-color: #ffbd2e;
     transition: 4ms;
     
