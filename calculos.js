@@ -2,8 +2,7 @@
 let valoresLidos=document.getElementById("valores");
 //variável do tipo objeto para fazer o cálculo
 let calculo={
-   /* valorInserido1:0,
-    valorInserido2:0,*/
+   
     valorInserido:null,
     funcaoCalcular:null
 };
@@ -24,7 +23,7 @@ function atribuirEventos() {
     document.getElementById("botao7").addEventListener("click", inserirNumero);
     document.getElementById("botao8").addEventListener("click", inserirNumero);
     document.getElementById("botao9").addEventListener("click", inserirNumero);
-
+    
     //Atribuindo evento do botão limpar chamando a função pra limpar
     document.getElementById("botaoLimpar").addEventListener("click", limparDados);
     //Atribuindo evento ao botão ponto chamando a função inserir ponto
@@ -34,7 +33,7 @@ function atribuirEventos() {
     document.getElementById("subtracao").addEventListener("click",clicarOperador);
     document.getElementById("multiplicacao").addEventListener("click",clicarOperador);
     document.getElementById("divisao").addEventListener("click",clicarOperador);
-   
+    document.getElementById("potencia").addEventListener("click",clicarOperador);
     //Atribuindo evento ao botão de resultado
     document.getElementById("botaoResultado").addEventListener("click", clicarResultado);
 }
@@ -75,8 +74,8 @@ function dividir(valor1, valor2){
         return valor1 / valor2;
     }
 }
-function porcentagem(valor){
-    return valor/100;
+function potencia(valor1,valor2){
+    return Math.pow(valor1,valor2);
 }
 //FUNÇÕES DE MANIPULAÇÃO
 function limparDados(){
@@ -95,12 +94,17 @@ function inserirPonto(){
 //FUNÇÕES PARA ATRIBUIR OPERAÇÕES
 //atualiza o objeto calculo com o valor do operador
 function clicarOperador() {
-    if(!isNaN(valoresLidos.value)){//se o valor inserido no input for um numero ele add o valor no atributo valorInserido1
-        calculo.valorInserido1 = Number(valoresLidos.value);
-    }// senao for numerico ele pega o caracter(operador) inserido e coloca na var op por meio do target.textContent
+    if(!isNaN(valoresLidos.value)){
+       if(calculo.valorInserido==null){//se o valor lido(caracter/numero) no input for um numero ele verifica se o valor inserido pelo botao está vazio
+           calculo.valorInserido=Number(valoresLidos.value);//se sim ele armazena o valor convertido em numero no valor par calculo 
+       }else if (calculo.funcaoCalcular !=null){//
+           calculo.valorInserido=calculo.funcaoCalcular(calculo.valorInserido,Number(valoresLidos.value))
+       }
+    }
+    // senao for numerico ele pega o caracter(operador) inserido e coloca na var op por meio do target.textContent
     let op = event.target.textContent;
     atribuirOperacoes(op); //passa o operador como parametro de atribuirOperacoes
-    valoresLidos.value =op;
+    valoresLidos.value=op; 
 }
 //atribui a função correta para cada operador clicado dentro do metodo funçaoCalcular do objeto calculo
 
@@ -109,17 +113,19 @@ function atribuirOperacoes(op){
         calculo.funcaoCalcular=somar;
     }else if(op=="-"){
         calculo.funcaoCalcular=subtrair;
-    }else if(op=="*"){
+    }else if(op=="x"){
         calculo.funcaoCalcular=multiplicar;
-    }else {
+    }else if (op=="/") {
         calculo.funcaoCalcular=dividir;
+    }else{
+        calculo.funcaoCalcular=potencia;
     }
 }
 //FUNÇÃO PARA RETORNAR O RESULTADO
 
 function clicarResultado(){ //verifica se o valor inserido é um numero e se a função para calcular q foi
                             //preenchida no obejto é diferente de vazio
-    if(!isNaN(valoresLidos.value) && calculo.funcaoParaCalcular !=null){
+    if(!isNaN(valoresLidos.value) && calculo.funcaoCalcular !=null){
         let res = calculo.funcaoCalcular(calculo.valorInserido, Number(valoresLidos.value));
         valoresLidos.value = res;//armazena o resultado no input e exibe ao usuario
         calculo.valorInserido= res; //armazena  o resultado no valor inserido caso a pessoa queira continuar a conta com o valor encontrado
