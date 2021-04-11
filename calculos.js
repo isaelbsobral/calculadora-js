@@ -1,8 +1,7 @@
 //variável pra armazenar o valor capturado dentro do input
 let valoresLidos=document.getElementById("valores");
 //variável do tipo objeto para fazer o cálculo
-let calculo={
-   
+let calculo={   
     valorInserido:null,
     funcaoCalcular:null
 };
@@ -13,33 +12,25 @@ window.addEventListener("load", function(){
 //ATRIBUIR EVENTTOS PARA OS BOTÕES DA CALCULADORA
 function atribuirEventos() {
     //Atribuindo eventos nos botões dos números
-    document.getElementById("botao0").addEventListener("click", inserirNumero);
-    document.getElementById("botao1").addEventListener("click", inserirNumero);
-    document.getElementById("botao2").addEventListener("click", inserirNumero);
-    document.getElementById("botao3").addEventListener("click", inserirNumero);
-    document.getElementById("botao4").addEventListener("click", inserirNumero);
-    document.getElementById("botao5").addEventListener("click", inserirNumero);
-    document.getElementById("botao6").addEventListener("click", inserirNumero);
-    document.getElementById("botao7").addEventListener("click", inserirNumero);
-    document.getElementById("botao8").addEventListener("click", inserirNumero);
-    document.getElementById("botao9").addEventListener("click", inserirNumero);
-    
+    for (var i=0;i<=9;i++){
+    document.getElementById("botao"+i).addEventListener("click", getNumero);
+    }   
+   
+    //Atribuindo evento aos botões de operações
+    for (var j=1;j<=5;j++){
+    document.getElementById("operacao"+j).addEventListener("click",clicarOperador);
+    }    
     //Atribuindo evento do botão limpar chamando a função pra limpar
     document.getElementById("botaoLimpar").addEventListener("click", limparDados);
     //Atribuindo evento ao botão ponto chamando a função inserir ponto
-    document.getElementById("botaoPonto").addEventListener("click",inserirPonto);
-    //Atribuindo evento aos botões de operações
-    document.getElementById("soma").addEventListener("click",clicarOperador);
-    document.getElementById("subtracao").addEventListener("click",clicarOperador);
-    document.getElementById("multiplicacao").addEventListener("click",clicarOperador);
-    document.getElementById("divisao").addEventListener("click",clicarOperador);
-    document.getElementById("potencia").addEventListener("click",clicarOperador);
+    document.getElementById("botaoPonto").addEventListener("click",getPonto);
     //Atribuindo evento ao botão de resultado
     document.getElementById("botaoResultado").addEventListener("click", clicarResultado);
 }
 
 //FUNÇÃO PARA PEGAR NÚMERO E COLOCAR NO INPUT
-function inserirNumero() {
+function getNumero(event) {
+    event.preventDefault();
     // Se o valor na tela não for um número,
     // substitui pelo número/valor do botão
     //isnan verificar se o valor capturado é um número
@@ -69,7 +60,7 @@ function multiplicar(valor1, valor2){
 }
 function dividir(valor1, valor2){
     if(valor2 == 0){
-        return "Erro, divisão por zero!";
+        return "Não divide por 0";
     }else{
         return valor1 / valor2;
     }
@@ -78,12 +69,14 @@ function potencia(valor1,valor2){
     return Math.pow(valor1,valor2);
 }
 //FUNÇÕES DE MANIPULAÇÃO
+//Limpando dados do input
 function limparDados(){
     valoresLidos.value = "";
     calculo.valorInserido = null;
     calculo.funcaoCalcular = null;
 }
-function inserirPonto(){
+//Pegando o "." do input
+function getPonto(){
     //se o valor do input estiver vazio e não for um número ele preenche o input com 0.
     if(valoresLidos.value ==="" || isNaN(valoresLidos.value)){
         valoresLidos.value = "0.";
@@ -91,9 +84,10 @@ function inserirPonto(){
         valoresLidos.value = valoresLidos.value + ".";
     }
 }
-//FUNÇÕES PARA ATRIBUIR OPERAÇÕES
-//atualiza o objeto calculo com o valor do operador
-function clicarOperador() {
+//FUNÇÕES PARA ATRIBUIR OPERAÇÕES AO CÁLCULO
+//Atualiza o objeto calculo com o valor do operador
+function clicarOperador(event) {
+    event.preventDefault();
     if(!isNaN(valoresLidos.value)){
        if(calculo.valorInserido==null){//se o valor lido(caracter/numero) no input for um numero ele verifica se o valor inserido pelo botao está vazio
            calculo.valorInserido=Number(valoresLidos.value);//se sim ele armazena o valor convertido em numero no valor par calculo 
