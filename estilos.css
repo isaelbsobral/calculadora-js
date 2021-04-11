@@ -14,7 +14,7 @@ body{
     display: flex;    
     align-items: center;
     flex-direction: column;
-    
+    background-image: url();
 }
 .calculadora-container{
     background-color: #ad75ad;
@@ -23,10 +23,8 @@ body{
     display:flex;
     flex-direction: column;
     justify-content: space-between;
-    border-radius: 10px;   
-    
-    
-}
+    border-radius: 10px;  
+ }
 .botao,.botaoC,.botaoR,.op{
     height: 50px;
     margin: 5px;
@@ -34,6 +32,7 @@ body{
     font-family: 'Courier New', Courier, monospace;
     font-weight: bold;
     font-size: 18px;
+    background-color:aliceblue;
 }
 .botao,.op{
     width: 50px;   
@@ -56,11 +55,16 @@ body{
     font-family:'Courier New', Courier, monospace;
     font-size: 18px;
     font-weight: bold;
+    text-align: right;
     width: 260px;
     height: 40px;
+    border: 2px solid black;
+    border-radius: 5px;
     margin-top: 5px;
     margin-bottom: 5px;
     margin: auto;
+    background-color:aliceblue;
+
 }
 .botoes{
     margin:auto;
