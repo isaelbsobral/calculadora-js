@@ -26,7 +26,9 @@ function atribuirEventos() {
     document.getElementById("botaoPonto").addEventListener("click",getPonto);
     //Atribuindo evento ao botão de resultado
     document.getElementById("botaoResultado").addEventListener("click", clicarResultado);
+    
 }
+
 
 //FUNÇÃO PARA PEGAR NÚMERO E COLOCAR NO INPUT
 function getNumero(event) {
