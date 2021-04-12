@@ -5,7 +5,7 @@
 }
 h1{
     margin:20px;
-    color: aliceblue;
+    color: #ffff;
 }
 body{
     background-color:black;
@@ -14,11 +14,10 @@ body{
     display: flex;    
     align-items: center;
     flex-direction: column;
-    background-image: url("contas.jpg");
+    background-image: url("nazare.jpg");
     
 }
-.calculadora-container{
-    background-color: #ad75ad;
+.calculadora-container{    
     width: 300px;
     padding: 10px 5px;   
     display:flex;
