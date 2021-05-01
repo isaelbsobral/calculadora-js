@@ -1,5 +1,9 @@
 # Calculadora Simples 
-Atividade Pontuada da disciplina de Programação WEB Utilizando HTML, CSS e JavaScript
+## Feita durante a disciplina de Programação WEB no curso técnico de Desenvolvimento de Sistemas.
 
-<img src="C:\Users\isael\Documents\Desenvolvimento de Sistemas\Curso Técnico\2º Semestre\Programação WEB\Calculadora JS\view.png" style="zoom:75%;" />
+### Projeto desenvolvido utilizando HTML, CSS e Javascript
+
+### Modelo final:  
+
+<img src="https://ibb.co/VTD24vm">
 
