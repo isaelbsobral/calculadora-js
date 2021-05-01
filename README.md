@@ -3,5 +3,5 @@
 
 ### Projeto desenvolvido utilizando HTML, CSS e Javascript
 
-### Modelo final:  ![](C:\Users\isael\Documents\Desenvolvimento de Sistemas\Curso Técnico\2º Semestre\Programação WEB\Calculadora JS\contas.jpg)
+### Modelo final:  ![](https://yt3.ggpht.com/ytc/AAUvwniXpvOXFoWvzVnlxQoxMeQf1iAZUTIpo33iVWYV=s48-c-k-c0x00ffffff-no-rj)
 
