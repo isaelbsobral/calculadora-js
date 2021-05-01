@@ -3,7 +3,5 @@
 
 ### Projeto desenvolvido utilizando HTML, CSS e Javascript
 
-### Modelo final:  
-
-![C:\Users\isael\Documents\Desenvolvimento de Sistemas\Curso Técnico\2º Semestre\Programação WEB\Calculadora JS\view.png](C:\Users\isael\Documents\Desenvolvimento de Sistemas\Curso Técnico\2º Semestre\Programação WEB\Calculadora JS\nazare.jpg)
+### Modelo final:  ![](C:\Users\isael\Documents\Desenvolvimento de Sistemas\Curso Técnico\2º Semestre\Programação WEB\Calculadora JS\contas.jpg)
 
