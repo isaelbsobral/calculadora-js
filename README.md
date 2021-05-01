@@ -5,5 +5,5 @@
 
 ### Modelo final:  
 
-<img src="https://ibb.co/VTD24vm">
+![](C:\Users\isael\Documents\Desenvolvimento de Sistemas\Curso Técnico\2º Semestre\Programação WEB\Calculadora JS\view.png)
 
