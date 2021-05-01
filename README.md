@@ -3,5 +3,5 @@
 
 ### Projeto desenvolvido utilizando HTML, CSS e Javascript
 
-### Modelo final:  ![](https://yt3.ggpht.com/ytc/AAUvwniXpvOXFoWvzVnlxQoxMeQf1iAZUTIpo33iVWYV=s48-c-k-c0x00ffffff-no-rj)
+### Modelo final:  ![](C:\Users\isael\Pictures\IMG-20190916-WA0001.jpeg)
 
