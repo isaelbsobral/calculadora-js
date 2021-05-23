@@ -3,5 +3,4 @@
 
 ### Projeto desenvolvido utilizando HTML, CSS e Javascript
 
-### Modelo final:  ![view](C:\Users\isael\Documents\Desenvolvimento de Sistemas\Curso Técnico\2º Semestre\Programação WEB\Calculadora JS\view.png)
 
